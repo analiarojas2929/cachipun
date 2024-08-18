@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachipun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Cachipun contra la maquina</h1>
+    </header>
+    <main>
+        <section id="setup">
+            <label for="rounds">¿Cuantas veces deseas jugar contra la computadora?</label>
+            <input type="number" id="rounds" min="1" placeholder="Numero de rondas">
+            <button onclick="startGame()">Comenzar juego</button>
+        </section>
+
+
+        <section id="gameArea" style="display: none;">
+            <div class="separator"></div>
+            <p id="roundInfo"></p>
+            <button onclick="playRound('piedra')">Piedra</button>
+            <button onclick="playRound('papel')">Papel</button>
+            <button onclick="playRound('tijera')">Tijera</button>
+        </section>
+        <section id="resultArea" style="display: none;">
+            <div class="separator"></div>
+            <div id="scoreSummary">
+                <p id="userScore"></p>
+                <p id="computerScore"></p>
+            </div>
+            <div id="finalResults"></div>
+            <button onclick="restartGame()">Volver a jugar</button>
+        </section>
+    </main>
+    <script src="scripts.js">
+    </script>
+</body>
+
+</html>
